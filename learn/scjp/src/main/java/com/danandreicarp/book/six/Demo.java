@@ -1,4 +1,4 @@
-package com.danandreicarp.six;
+package com.danandreicarp.book.six;
 
 public class Demo {
 	public void someMethod(String[] parameters) {

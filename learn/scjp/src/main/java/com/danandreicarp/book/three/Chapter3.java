@@ -1,4 +1,4 @@
-package com.danandreicarp.three;
+package com.danandreicarp.book.three;
 
 public class Chapter3 {
 	

@@ -1,4 +1,4 @@
-package com.danandreicarp.five;
+package com.danandreicarp.book.five;
 
 public class Chapter5 {
 	public static void main(String[] args) {

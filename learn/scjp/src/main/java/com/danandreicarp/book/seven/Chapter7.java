@@ -1,4 +1,4 @@
-package com.danandreicarp.seven;
+package com.danandreicarp.book.seven;
 
 public class Chapter7 {
 	public static void main(String[] args) {

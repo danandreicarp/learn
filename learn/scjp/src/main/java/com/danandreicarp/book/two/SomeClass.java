@@ -1,4 +1,4 @@
-package com.danandreicarp.two;
+package com.danandreicarp.book.two;
 
 public class SomeClass {
 	public int i;
