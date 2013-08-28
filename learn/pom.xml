@@ -11,7 +11,8 @@
 		<module>spring</module>
 		<module>algorithms</module>
 		<module>scjp</module>
-	</modules>
+		<module>designpatterns</module>
+  </modules>
 	
 	<properties>
 		<junit.version>4.11</junit.version>
