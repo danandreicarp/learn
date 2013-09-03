@@ -1,4 +1,4 @@
 hello git
 hello again
 Updating readme with new information
-Sharing remotely is fun and easy
+Sharing remotely is fun and easyFeature1
