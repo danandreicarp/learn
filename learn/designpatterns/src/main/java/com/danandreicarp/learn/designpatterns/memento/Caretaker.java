@@ -2,10 +2,16 @@ package com.danandreicarp.learn.designpatterns.memento;
 
 public class Caretaker {
 
-	public static void main(final String[] args) {
-		final Originator originator = new Originator();
+	private static IMementoToCaretaker memento;
 
-		final IMementoToCaretaker memento = originator.saveState();
+	public Caretaker(final IMementoToCaretaker memento) {
+		Caretaker.memento = memento;
+	}
+
+	public static void main(final String[] args) {
+
+		final Originator originator = new Originator();
+		memento = originator.saveState();
 
 		System.out.println("originator state:" + originator.getState());
 

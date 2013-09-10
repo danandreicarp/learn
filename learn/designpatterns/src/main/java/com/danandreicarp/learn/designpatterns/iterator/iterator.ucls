@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.3" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <interface id="1" language="java" name="com.danandreicarp.learn.designpatterns.iterator.IAggregate" 
+    project="designpatterns" 
+    file="/designpatterns/src/main/java/com/danandreicarp/learn/designpatterns/iterator/IAggregate.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="208" x="41" y="212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" language="java" name="com.danandreicarp.learn.designpatterns.iterator.Aggregate" 
+    project="designpatterns" 
+    file="/designpatterns/src/main/java/com/danandreicarp/learn/designpatterns/iterator/Aggregate.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="208" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="com.danandreicarp.learn.designpatterns.iterator.IIterator" 
+    project="designpatterns" 
+    file="/designpatterns/src/main/java/com/danandreicarp/learn/designpatterns/iterator/IIterator.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="208" x="289" y="459"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="com.danandreicarp.learn.designpatterns.iterator.Aggregate.Iterator" 
+    project="designpatterns" 
+    file="/designpatterns/src/main/java/com/danandreicarp/learn/designpatterns/iterator/Aggregate.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="208" x="289" y="212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.danandreicarp.learn.designpatterns.iterator.IteratorClient" 
+    project="designpatterns" 
+    file="/designpatterns/src/main/java/com/danandreicarp/learn/designpatterns/iterator/IteratorClient.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="208" x="289" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="6">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <realization id="7">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <nesting id="8">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </nesting>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
