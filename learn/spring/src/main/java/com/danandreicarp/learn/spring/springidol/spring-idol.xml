@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
@@ -33,4 +34,88 @@
 	
 	<bean id="saxophone" class="com.danandreicarp.learn.spring.springidol.Saxophone" />
 	<bean id="piano" class="com.danandreicarp.learn.spring.springidol.Piano" />
+	
+	<bean id="innerKenny" class="com.danandreicarp.learn.spring.springidol.Instrumentalist">
+		<property name="song" value="Jingle Bells" />
+		<property name="instrument">
+			<bean class="com.danandreicarp.learn.spring.springidol.Saxophone" />
+		</property>
+	</bean>
+	
+	<bean id="innerPoeticDuke" class="com.danandreicarp.learn.spring.springidol.PoeticJuggler">
+		<constructor-arg value="15" />
+		<constructor-arg>
+			<bean class="com.danandreicarp.learn.spring.springidol.Sonnet29" />
+		</constructor-arg>
+	</bean>
+	
+	<bean id="pKenny" class="com.danandreicarp.learn.spring.springidol.Instrumentalist"
+		p:song = "Jingle Bells"
+		p:instrument-ref = "saxophone" />
+		<!-- <property name="instrument" value="#{songSelector.selectSong() == 'Jingle Bells'?piano:saxophone}"/> -->
+		
+	<!-- <bean id="hank" class="com.danandreicarp.learn.spring.springidol.OneManBand">
+		<property name="instruments">
+			<list>
+				<ref bean="guitar" />
+				<ref bean="cymbal" />
+				<ref bean="harmonica" />
+			</list> -->
+			<!-- <set>
+				<ref bean="guitar" />
+				<ref bean="cymbal" />
+				<ref bean="harmonica" />
+				<ref bean="harmonica" />
+			</set> -->
+		<!-- </property>
+	</bean> -->
+	<!-- <bean id="mapHank" class="com.danandreicarp.learn.spring.springidol.OneManBand">
+		<property name="instruments">
+			<map>
+				<entry key="GUITAR" value-ref="guitar" />
+				<entry key="CYMBAL" value-ref="cymbal" />
+				<entry key="HARMONICA" value-ref="harmonica" /> 
+			</map>
+		</property>
+	</bean> -->
+	<bean id="propHank" class="com.danandreicarp.learn.spring.springidol.OneManBand">
+		<property name="instruments">
+			<props>
+				<prop key="GUITAR">STRUM STRUM STRUM</prop>
+				<prop key="CYMBAL">CRASH CRASH CRASH</prop>
+				<prop key="HARMONICA">HUM HUM HUM</prop>
+			</props>
+		</property>
+		<!-- <property name="someNonNullProperty"><null/></property> -->
+	</bean>
+	
+	<bean id="carl" class="com.danandreicarp.learn.spring.springidol.Instrumentalist">
+		<property name="song" value="#{pKenny.song}"/>
+		<!-- <property name="methodSong" value="#{songSelector.selectSong()}"/> -->
+		<!-- <property name="chainMethodSong" value="#{songSelector.selectSong().toUpperCase()}"/> -->
+		<!-- <property name="nullCheckedMethodSong" value="#{songSelector.selectSong()?.toUpperCase()}"/> -->
+		<!-- <property name="fullName" value="#{performer.firstName + ' ' + performer.lastName}"/> -->
+		<!-- <property name="song" value="#{kenny.song != null ? kenny.song : 'Greensleeves'}"/> -->
+	</bean>
+	
+	<!-- <bean id="mathStatic" class="com.danandreicarp.learn.spring.springidol.MathStatic">
+		<property name="multiplier" value="#{T(java.lang.Math).PI}"/>
+		<property name="randomNumber" value="#{T(java.lang.Math).random()}"/>
+		<property name="circumference" value="#{2 * T(java.lang.Math).PI * circle.radius}"/>
+		<property name="area" value="#{T(java.lang.Math).PI * circle.radius ^ 2}"/>
+	</bean> -->
+	
+	<!-- <bean id="math" class="com.danandreicarp.learn.spring.springidol.Math">
+		<property name="adjustedAmount" value="#{counter.total + 42}"/>
+		<property name="adjustedAmount" value="#{counter.total - 20}"/>
+		<property name="equal" value="#{counter.total == 100}"/>
+		<property name="hasCapacity" value="#{counter.total le 100000}"/>
+		<property name="largeCircle" value="#{shape.kind == 'circle' and shape.perimeter gt 10000}"/>
+		<property name="outOfStock" value="#{not product.available}"/>
+	</bean> -->
+	
+	<!-- <bean id="propertyTest" class="com.danandreicarp.learn.spring.springidol.PropertyTest">
+		<property name="validEmail" value="#{admin.email.matches '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.com'}"/>
+	</bean> -->
+	
 </beans>
