@@ -13,12 +13,7 @@ public class SelectionSort extends Sorter<Integer> {
 	}
 
 	@Override
-	List<Integer> getList() {
-		return list;
-	}
-
-	@Override
-	public void sort() {
+	public void sort(List<Integer> list) {
 		for (int i = 0; i < list.size(); i++) {
 			int min = i;
 
@@ -35,7 +30,7 @@ public class SelectionSort extends Sorter<Integer> {
 	public static void main(final String[] args) {
 		final SelectionSort ss = new SelectionSort(1000);
 
-		ss.process();
+		ss.process(list);
 	}
 
 }

@@ -13,12 +13,7 @@ public class ShellSort extends Sorter<Integer> {
 	}
 
 	@Override
-	List<Integer> getList() {
-		return list;
-	}
-
-	@Override
-	void sort() {
+	public void sort(List<Integer> list) {
 		int gap = Double.valueOf(Math.floor(list.size() / 2)).intValue();
 
 		while (gap > 0) {
@@ -39,7 +34,7 @@ public class ShellSort extends Sorter<Integer> {
 
 	public static void main(final String[] args) {
 		final ShellSort ss = new ShellSort(5);
-		ss.process();
+		ss.process(list);
 	}
 
 }

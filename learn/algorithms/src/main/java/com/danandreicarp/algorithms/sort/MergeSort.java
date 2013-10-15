@@ -15,12 +15,7 @@ public class MergeSort extends Sorter<Integer> {
 	}
 
 	@Override
-	List<Integer> getList() {
-		return list;
-	}
-
-	@Override
-	void sort() {
+	public void sort(List<Integer> list) {
 		aux = new LinkedList<Integer>();
 
 		sort(0, list.size() - 1);
@@ -61,7 +56,7 @@ public class MergeSort extends Sorter<Integer> {
 
 	public static void main(final String[] args) {
 		final MergeSort ms = new MergeSort(1000);
-		ms.process();
+		ms.process(list);
 	}
 
 }

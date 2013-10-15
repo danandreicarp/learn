@@ -13,14 +13,9 @@ public class BubbleSort extends Sorter<Integer> {
 	}
 
 	@Override
-	List<Integer> getList() {
-		return list;
-	}
-
-	@Override
-	void sort() {
+	public void sort(List<Integer> list) {
 		for (int i = 0; i < list.size(); i++) {
-			for (int j = list.size() - 1; j > i + 1; j--) {
+			for (int j = list.size() - 1; j > i; j--) {
 				if (list.get(j) < list.get(j - 1)) {
 					AlgorithmsUtil.swap(list, j, j - 1);
 				}
@@ -29,9 +24,8 @@ public class BubbleSort extends Sorter<Integer> {
 	}
 
 	public static void main(final String[] args) {
-		final BubbleSort bs = new BubbleSort(1000);
+		final BubbleSort bs = new BubbleSort(10);
 
-		bs.process();
+		bs.process(list);
 	}
-
 }
